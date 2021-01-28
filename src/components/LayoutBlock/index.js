@@ -2,8 +2,9 @@ import l from './style.module.css';
 
 
 const AppLayout = ({ id, title, desc, urlBg, colorBg }) => {
-    const style = {backgroundImage: `url(${urlBg})`,
-                    backgroundColor: `${colorBg}`};
+    const style = {};
+    if (urlBg) { style.backgroundImage = `url(${urlBg})` }
+    if (colorBg) { style.backgroundColor = colorBg }
     
     return (
         <section className={l.root } id={ id } style={style}>
