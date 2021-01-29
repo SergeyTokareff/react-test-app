@@ -1,7 +1,7 @@
 import l from './style.module.css';
 
 
-const AppLayout = ({ id, title, desc, urlBg, colorBg }) => {
+const AppLayout = ({ id, title, urlBg, colorBg, children }) => {
     const style = {};
     if (urlBg) { style.backgroundImage = `url(${urlBg})` }
     if (colorBg) { style.backgroundColor = colorBg }
@@ -15,7 +15,7 @@ const AppLayout = ({ id, title, desc, urlBg, colorBg }) => {
                         <span className={ l.separator }></span>
                     </div>
                     <div className={ l.desc + " " + l.full }>
-                        <p>{ desc }</p>
+                        { children }
                     </div>
                 </article>
             </div>
